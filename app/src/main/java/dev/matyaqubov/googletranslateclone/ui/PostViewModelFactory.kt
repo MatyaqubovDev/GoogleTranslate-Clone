@@ -1,8 +1,7 @@
-package dev.matyaqubov.googletranslateclone
+package dev.matyaqubov.googletranslateclone.ui
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import dev.matyaqubov.googletranslateclone.MainViewModel
 import dev.matyaqubov.googletranslateclone.data.remote.ApiService
 
 class PostViewModelFactory(private val apiService: ApiService) : ViewModelProvider.Factory {

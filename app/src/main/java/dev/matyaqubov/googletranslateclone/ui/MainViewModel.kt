@@ -1,4 +1,4 @@
-package dev.matyaqubov.googletranslateclone
+package dev.matyaqubov.googletranslateclone.ui
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

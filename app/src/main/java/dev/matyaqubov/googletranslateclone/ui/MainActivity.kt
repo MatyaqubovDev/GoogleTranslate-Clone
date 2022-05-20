@@ -1,4 +1,4 @@
-package dev.matyaqubov.googletranslateclone
+package dev.matyaqubov.googletranslateclone.ui
 
 import android.os.Bundle
 import android.text.Editable
@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
                 job = lifecycleScope.launchWhenStarted {
                     delay(500)
                     if (p0!!.isNotEmpty())
-                    viewModel.translationWord(p0.toString(), "en", "uz")
+                        viewModel.translationWord(p0.toString(), "en", "uz")
                 }
             }
         })
@@ -51,5 +51,10 @@ class MainActivity : AppCompatActivity() {
             this,
             PostViewModelFactory(ApiClient.translateService)
         )[MainViewModel::class.java]
+    }
+
+    override fun onDestroy() {
+        job?.cancel()
+        super.onDestroy()
     }
 }
